@@ -6,7 +6,7 @@ import EmailForm from "./components/EmailForm";
 import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
-	const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
 
 	return (
 		<AnimatePresence>
@@ -19,28 +19,22 @@ function App() {
 					transition={{ duration: 1, ease: "linear" }}
 					className="w-screen h-[100dvh] lg:p-7 overflow-hidden bg-[#F7F7F8]"
 				>
-					<section className="flex h-full lg:rounded-lg  lg:border md:overflow-hidden border-[#040c2f15]">
-						<div className="w-full bg-white px-5 py-14 lg:py-20 lg:px-10 flex flex-col justify-start">
-							<header className="flex gap-x-3 items-center mb-10">
-								<img
-									className="lg:size-16 md:size-14 size-12"
-									src="/assets/logo.svg"
-									alt="logo icon"
-								/>
-								<h1 className="font-extrabold tracking-normal font-dmSans text-[#020617] text-[28px] sm:text-3xl lg:text-[40px] leading-[1.1em]">
-									Christian Writes
-								</h1>
-							</header>
-							<div className="font-inter flex flex-col gap-y-6 max-w-[400px] lg:max-w-[500px] mt-auto">
-								<Banner />
-								<h2 className="font-semibold font-dmSans tracking-normal text-3xl lg:text-4xl leading-[1.1em]">
-									Ready to launch your <br className="hidden sm:block" />{" "}
-									product, course or app?
+					<section className="flex justify-center h-full lg:rounded-lg  lg:border md:overflow-hidden border-[#040c2f15]">
+						<div className="w-full bg-white px-5 py-14 lg:px-10 flex flex-col justify-center">
+							<h1 className="font-extrabold tracking-normal mb-28 sm:mb-14 font-dmSans text-[#020617] text-3xl lg:text-[40px] leading-[1.1em]">
+								<span className="text-[#04BF87]">Christian</span> Writes
+							</h1>
+
+							<div className="font-inter flex flex-col gap-y-4 lg:gap-y-5 max-w-[400px] lg:max-w-[500px]">
+								<Banner message="LAUNCHING SOON..." />
+								<h2 className="font-semibold font-dmSans tracking-normal text-[32px] leading-[1.1em]">
+									Ready to share your faith-filled stories and content?
 								</h2>
-								<p className="text-[#334155] text-sm leading-[1.65em]">
-									Publish your own waitlist page in minutes to start capturing
-									email addresses from potential customers and promoting your
-									launch online
+								<p className="text-[#334155] text-base leading-[1.65em]">
+									Be the first to join Christian Writes! Share your faith
+									through writing, connect with others, and inspire the world.{" "}
+									<br />
+									Sign up now! 📚✨
 								</p>
 								<EmailForm />
 								<Counter />
@@ -48,8 +42,8 @@ function App() {
 						</div>
 						<div className="w-full hidden md:block max-w-[45vw]">
 							<img
-								className="object-cover object-[top_center] w-full h-full"
-								src="/assets/background2.jpg"
+								className="object-cover object-center w-full h-full"
+								src="/assets/background3.png"
 								alt="background"
 							/>
 						</div>
